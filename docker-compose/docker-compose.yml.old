@@ -38,12 +38,11 @@ services:
     links:
       - db:database
     environment:
-      # ETHEREUM_JSONRPC_HTTP_URL: http://65.109.56.112:8545/
-      #  ETHEREUM_JSONRPC_TRACE_URL: http://65.109.56.112:8545/
-      #  ETHEREUM_JSONRPC_WS_URL: ws://65.109.56.112:8545/
-      #  CHAIN_ID: '205205'
-      #  SUBNETWORK: 'Stratis EVM'
-      ETHEREUM_JSONRPC_VARIANT: 'geth'
+        ETHEREUM_JSONRPC_HTTP_URL: http://65.109.56.112:8545/
+        ETHEREUM_JSONRPC_TRACE_URL: http://65.109.56.112:8545/
+        ETHEREUM_JSONRPC_WS_URL: ws://65.109.56.112:8545/
+        CHAIN_ID: '205205'
+        SUBNETWORK: 'Stratis EVM'
 
   visualizer:
     extends:
