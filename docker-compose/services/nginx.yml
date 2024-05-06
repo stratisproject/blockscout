@@ -18,3 +18,8 @@ services:
       - 8080:8080
       - 8081:8081
       - 443:443
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "5"
