@@ -41,16 +41,23 @@ services:
     links:
       - db:database
     environment:
-        #ETHEREUM_JSONRPC_HTTP_URL: http://host.docker.internal:8545/
-        #ETHEREUM_JSONRPC_TRACE_URL: http://host.docker.internal:8545/
-        #ETHEREUM_JSONRPC_WS_URL: ws://host.docker.internal:8545/
-        #CHAIN_ID: '1337'
-        ETHEREUM_JSONRPC_VARIANT: 'geth'
+      #ETHEREUM_JSONRPC_HTTP_URL: http://host.docker.internal:8545/
+      #ETHEREUM_JSONRPC_TRACE_URL: http://host.docker.internal:8545/
+      #ETHEREUM_JSONRPC_WS_URL: ws://host.docker.internal:8545/
+      #CHAIN_ID: '1337'
+      ETHEREUM_JSONRPC_VARIANT: 'geth'
 
   visualizer:
     extends:
       file: ./services/visualizer.yml
       service: visualizer
+
+  sc-verifier:
+    extends:
+      file: ./services/smart-contract-verifier.yml
+      service: smart-contract-verifier
+    ports:
+      - 127.0.0.1:8050:8050
 
   sig-provider:
     extends:
