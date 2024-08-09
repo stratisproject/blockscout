@@ -8,8 +8,8 @@ services:
       - 'host.docker.internal:host-gateway'
     volumes:
       - "../proxy:/etc/nginx/templates"
-      - ~/ssl/explorer.cert.pem:/etc/nginx/ssl/explorer.cert.pem
-      - ~/ssl/explorer.key.pem:/etc/nginx/ssl/explorer.key.pem
+      - ~/ssl/cert.pem:/etc/nginx/ssl/wildcard.cert.pem
+      - ~/ssl/key.pem:/etc/nginx/ssl/wildcard.key.pem
     environment:
       BACK_PROXY_PASS: ${BACK_PROXY_PASS:-http://backend:4000}
       FRONT_PROXY_PASS: ${FRONT_PROXY_PASS:-http://frontend:3000}

@@ -23,7 +23,7 @@ services:
         POSTGRES_USER: 'stats'
         POSTGRES_PASSWORD: 'n0uejXPl61ci6ldCuE2gQU5Y'
     ports:
-      - 7433:5432
+      - 127.0.0.1:7433:5432
     volumes:
       - ./stats-db-data:/var/lib/postgresql/data
     healthcheck:
@@ -34,7 +34,7 @@ services:
       start_period: 10s
 
   stats:
-    image: ghcr.io/blockscout/stats:${STATS_DOCKER_TAG:-latest}
+    image: stratiscr.azurecr.io/stats:v1
     pull_policy: always
     platform: linux/amd64
     restart: always
