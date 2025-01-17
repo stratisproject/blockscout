@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   frontend:
-    image: stratiscr.azurecr.io/bsfe:v9
+    image: stratiscr.azurecr.io/bsfe:v8
     pull_policy: always
     platform: linux/amd64
     restart: always
