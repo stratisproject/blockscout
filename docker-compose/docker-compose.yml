@@ -56,13 +56,16 @@ services:
     extends:
       file: ./services/smart-contract-verifier.yml
       service: smart-contract-verifier
-    ports:
-      - 127.0.0.1:8050:8050
 
   sig-provider:
     extends:
       file: ./services/sig-provider.yml
       service: sig-provider
+
+  coinsupply:
+    extends:
+      file: ./services/coinsupply.yml
+      service: coinsupply
 
   frontend:
     depends_on:
@@ -97,6 +100,7 @@ services:
       - backend
       - frontend
       - stats
+      - coinsupply
     extends:
       file: ./services/nginx.yml
       service: proxy
