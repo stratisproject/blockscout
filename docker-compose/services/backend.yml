@@ -14,8 +14,4 @@ services:
       -  ../envs/common-blockscout.env
     volumes:
       - ./logs/:/app/logs/
-    logging:
-      driver: json-file
-      options:
-        max-size: "50m"
-        max-file: "5"
+      - ./dets/:/app/dets/
