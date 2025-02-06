@@ -34,7 +34,8 @@ services:
       start_period: 10s
 
   stats:
-    image: stratiscr.azurecr.io/stats:v1
+    image: ghcr.io/blockscout/stats:${STATS_DOCKER_TAG:-latest}
+    #image: stratiscr.azurecr.io/stats:v1
     pull_policy: always
     platform: linux/amd64
     restart: always
