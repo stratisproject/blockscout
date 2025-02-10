@@ -7,4 +7,4 @@ services:
     platform: linux/amd64
     restart: always
     container_name: 'coinsupply'
-    command: --eth-rpc-url https://auroria.rpc.stratisevm.com --eth2-rpc-url https://auroria.rpc.stratisevm.com/prysm --explorer-url https://auroria.explorer.stratisevm.com
+    command: --eth-rpc-url http://207.154.197.204:8545 --eth2-rpc-url http://207.154.197.204:5052 --explorer-url https://auroria.explorer.stratisevm.com
