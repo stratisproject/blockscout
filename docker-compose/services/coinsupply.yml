@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  coinsupply:
+    image: stratisevm/coinsupply:latest
+    pull_policy: always
+    platform: linux/amd64
+    restart: always
+    container_name: 'coinsupply'
+    command: --eth-rpc-url http://207.154.197.204:8545 --eth2-rpc-url http://207.154.197.204:5052 --explorer-url https://auroria.explorer.stratisevm.com
