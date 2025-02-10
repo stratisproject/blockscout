@@ -34,10 +34,10 @@ services:
     links:
       - db:database
     environment:
-      ETHEREUM_JSONRPC_HTTP_URL: https://auroria.rpc.stratisevm.com/
-      ETHEREUM_JSONRPC_TRACE_URL: https://auroria.rpc.stratievm.com/
-      ETHEREUM_JSONRPC_WS_URL: wss://auroria.rpc.stratisevm.com/
-      CHAIN_ID: '205205'
+      ETHEREUM_JSONRPC_HTTP_URL: https://rpc.stratisevm.com/
+      ETHEREUM_JSONRPC_TRACE_URL: https://rpc.stratievm.com/
+      ETHEREUM_JSONRPC_WS_URL: wss://rpc.stratisevm.com/
+      CHAIN_ID: '105105'
 
   nft_media_handler:
     depends_on:
