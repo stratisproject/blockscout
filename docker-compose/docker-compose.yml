@@ -34,8 +34,8 @@ services:
     links:
       - db:database
     environment:
-      ETHEREUM_JSONRPC_HTTP_URL: https://rpc.stratisevm.com/
-      ETHEREUM_JSONRPC_TRACE_URL: https://rpc.stratievm.com/
+      ETHEREUM_JSONRPC_HTTP_URL: http://65.109.92.80:8545
+      ETHEREUM_JSONRPC_TRACE_URL: http://65.109.92.80:8545
       ETHEREUM_JSONRPC_WS_URL: wss://rpc.stratisevm.com/
       CHAIN_ID: '105105'
 
@@ -55,7 +55,7 @@ services:
     extends:
       file: ./services/visualizer.yml
       service: visualizer
-  
+
   sc-verifier:
     extends:
       file: ./services/smart-contract-verifier.yml
