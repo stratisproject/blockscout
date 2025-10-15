@@ -36,7 +36,7 @@ services:
     environment:
       ETHEREUM_JSONRPC_HTTP_URL: http://65.109.92.80:8545
       ETHEREUM_JSONRPC_TRACE_URL: http://65.109.92.80:8545
-      ETHEREUM_JSONRPC_WS_URL: wss://rpc.stratisevm.com/
+      ETHEREUM_JSONRPC_WS_URL: wss://rpc.xertra.com/
       CHAIN_ID: '105105'
 
   nft_media_handler:
